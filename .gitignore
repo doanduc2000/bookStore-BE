@@ -1,6 +1,6 @@
 package-lock.json
 node_modules
-.env
+
 TEST_FILE.md
 yarn.lock
 .vscode/
