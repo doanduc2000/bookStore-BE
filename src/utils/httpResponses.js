@@ -3,6 +3,14 @@ module.exports.ALREADY_EXISTS_EMAIL = 'ALREADY_EXISTS_EMAIL';
 module.exports.USER_CREATED = 'USER_CREATED';
 module.exports.USER_NOT_FOUND = 'USER_NOT_FOUND';
 module.exports.ERROR_PASSWORD_INCORRECT = 'ERROR_PASSWORD_INCORRECT';
+
+//Product code
+module.exports.ALREADY_EXISTS_PRODUCT = 'ALREADY_EXISTS_PRODUCT';
+module.exports.PRODUCT_CREATED = 'PRODUCT_CREATED';
+module.exports.PRODUCT_UPDATED = 'PRODUCT_UPDATED';
+
+module.exports.PRODUCT_NOT_FOUND = 'PRODUCT_NOT_FOUND';
+
 // Success message
 module.exports.SUCCESSFUL = 'SUCCESSFUL';
 // Success code

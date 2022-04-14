@@ -32,9 +32,7 @@ const register = async (req, res) => {
     return res.status(httpResponses.HTTP_STATUS_CREATED).json({
       success: true,
       message: `${httpResponses.USER_CREATED}`,
-      data: {
-        data: createUser,
-      },
+      data: createUser,
     });
   } catch (error) {
     logger.error(`register: ${error.message}`);
