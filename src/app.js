@@ -35,7 +35,5 @@ app.use(
   })
 );
 app.use('/api', indexRoute);
-app.use('/', (req, res) => {
-  res.send('hello');
-});
+
 module.exports = app;

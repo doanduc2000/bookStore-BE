@@ -1,3 +1,10 @@
+//User code
+module.exports.ALREADY_EXISTS_EMAIL = 'ALREADY_EXISTS_EMAIL';
+module.exports.USER_CREATED = 'USER_CREATED';
+module.exports.USER_NOT_FOUND = 'USER_NOT_FOUND';
+module.exports.ERROR_PASSWORD_INCORRECT = 'ERROR_PASSWORD_INCORRECT';
+// Success message
+module.exports.SUCCESSFUL = 'SUCCESSFUL';
 // Success code
 module.exports.HTTP_STATUS_CREATED = 201;
 module.exports.HTTP_STATUS_OK = 200;
