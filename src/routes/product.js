@@ -7,11 +7,12 @@ const {
   updateProduct,
   deleteProduct,
 } = require('../controllers/product');
+const { requireLogin } = require('../middlewares/auth');
 
 productRoute.get('/', getAllProduct);
-productRoute.post('/', createProduct);
+productRoute.post('/', requireLogin, createProduct);
 productRoute.get('/:id', getProductById);
-productRoute.put('/:id', updateProduct);
-productRoute.delete('/:id', deleteProduct);
+productRoute.put('/:id', requireLogin, updateProduct);
+productRoute.delete('/:id', requireLogin, deleteProduct);
 
 module.exports = productRoute;

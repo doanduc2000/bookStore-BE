@@ -1,1 +1,1 @@
-module.exports.SECRET_KEY = '@greenify!*123';
+module.exports.SECRET_KEY = '@bookStore!*123';

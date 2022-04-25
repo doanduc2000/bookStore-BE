@@ -55,6 +55,7 @@ const login = async (req, res) => {
       });
     }
     const isMatch = security.comparePassword(password, existedUser.password);
+    console.log(existedUser.password);
     if (!isMatch) {
       logger.error(`login: ${httpResponses.ERROR_PASSWORD_INCORRECT}`);
       return res.status(httpResponses.HTTP_STATUS_BAD_REQUEST).json({
