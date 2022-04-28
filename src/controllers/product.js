@@ -40,7 +40,12 @@ const createProduct = async (req, res) => {
 };
 const getAllProduct = async (req, res) => {
   try {
-    const filter = {};
+    const { _limit, _page, _sort } = req.query;
+    const filter = {
+      limit: _limit,
+      page: _page,
+      sort: _sort,
+    };
     const getAllProduct = await productService.getProduct(filter);
     logger.info(`getAllProduct: ${httpResponses.SUCCESSFUL}`);
     return res.status(httpResponses.HTTP_STATUS_OK).json({
@@ -147,5 +152,10 @@ const deleteProduct = async (req, res) => {
       .json({ success: false, message: `Error: ${error.message}` });
   }
 };
+const getProductByCategory = async (req, res) => {
+  try {
+    const category = req.query;
+  } catch (error) {}
+};
 
-module.exports = { createProduct, getAllProduct, getProductById, updateProduct, deleteProduct };
+module.exports = { createProduct, getAllProduct, getProductById, updateProduct, deleteProduct, getProductByCategory };

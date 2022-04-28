@@ -6,7 +6,10 @@ const getProductByCode = async (code) => {
   return await Product.findOne({ code: code });
 };
 const getProduct = async (filter) => {
-  return await Product.find(filter);
+  return await Product.find()
+    .skip(filter.page * filter.limit)
+    .limit(filter.limit)
+    .sort(filter.sort);
 };
 const createProduct = async (product) => {
   const newProduct = new Product(product);
